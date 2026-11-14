@@ -1,0 +1,8 @@
+{
+  // Cloudflare Workers の静的アセットとして公開する設定（https://samuraido2.<アカウント>.workers.dev）
+  "name": "samuraido2",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./"
+  }
+}
