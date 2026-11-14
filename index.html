@@ -1414,7 +1414,7 @@ class AI {
    剣客たち（見た目と流派）
    ===================================================================== */
 const CHARS = {
-  aoi: { name: '剣士 誠之介', short: '誠之介', style: 'seigan', title: '天下無双を志す若き剣士',
+  aoi: { name: '剣士 誠一', short: '誠一', style: 'seigan', title: '天下無双を志す若き剣士',
     look: { kim: '#2f55a8', kimD: '#1d3574', kimL: '#5a84d6', hak: '#2b2b3d', hakD: '#18182a', hakL: '#44445e', obi: '#d8b84a', under: '#ece4d0',
       skin: '#f2c48e', skinD: '#c98f5c', hair: '#16101c', band: '#f4f0e8', foot: '#ece4d0', sandal: '#4a3020', blade: '#dfe8f2', bladeD: '#8e9cae', tip: '#ffffff',
       tsuba: '#d4a838', tsuka: '#2a1e46', saya: '#1a1420', sayaM: '#d4a838', hairStyle: 'topknot', tails: [{ at: 'band', key: 'band', segs: 4, len: 2.6, w: 1 }] },
@@ -1425,7 +1425,7 @@ const CHARS = {
       tsuba: '#3a2a1a', tsuka: '#8a5e30', saya: null, hairStyle: 'topknot', band: '#d43030',
       tails: [{ at: 'band', key: 'band', segs: 3, len: 2.4, w: 1 }] },
     alt: { hak: '#5a2a2a', hakD: '#3a1818', hakL: '#7a3a3a', band: '#2a6ad4' } },
-  gonzo: { name: '野武士 権三', short: '権三', style: 'nodachi', title: '竹林の追い剥ぎ',
+  gonzo: { name: '野武士 権八', short: '権八', style: 'nodachi', title: '竹林の追い剥ぎ',
     look: { kim: '#6a5a3c', kimD: '#463a24', kimL: '#8a7a54', hak: '#3c3a2c', hakD: '#26241a', hakL: '#545240', obi: '#2a2018', under: '#5a4a3a',
       skin: '#d8a070', skinD: '#a8703e', hair: '#2a2018', beard: '#2a2018', foot: '#8a7a60', sandal: '#3a2618', blade: '#d8dce4', bladeD: '#7a8290', tip: '#ffffff',
       tsuba: '#4a4a4a', tsuka: '#3a2a1a', saya: '#3a2a1a', sayaM: '#6a6a6a', hairStyle: 'wild', armor: '#5a5a64', armorL: '#8a8a96' },
@@ -1441,7 +1441,7 @@ const CHARS = {
       skin: '#e8b888', skinD: '#b08058', hair: '#14100e', foot: '#e8e4d8', sandal: '#2a1a10', blade: '#eef2f8', bladeD: '#98a0b0', tip: '#ffffff',
       tsuba: '#1a1a1a', tsuka: '#e8e4d8', saya: '#141018', sayaM: '#d8d0b8', hairStyle: 'hat', hat: '#c9a45c', hatD: '#8a6a34' },
     alt: { kim: '#6a3a2a', kimD: '#42221a', kimL: '#8a5440', hat: '#5a5a5a', hatD: '#343434' } },
-  kimen: { name: '鬼面の剣鬼', short: '鬼面', style: 'nito', title: '二刀を振るう峠の鬼',
+  kimen: { name: '鬼面の左近', short: '左近', style: 'nito', title: '二刀を振るう峠の鬼',
     look: { kim: '#1e1a1e', kimD: '#0e0a0e', kimL: '#3a343a', hak: '#5a1414', hakD: '#360808', hakL: '#7a2424', obi: '#c8a040', under: '#2a2a2a',
       skin: '#c08a5a', skinD: '#8a5a3a', hair: '#e8e8e8', foot: '#2a2a2a', sandal: '#141414', blade: '#e0e4ec', bladeD: '#8890a0', tip: '#ffffff',
       tsuba: '#c8a040', tsuka: '#5a1414', saya: '#3a0a0a', sayaM: '#c8a040', hairStyle: 'oni', mask: '#c42020', maskD: '#7a1010', horn: '#f0e8d0', dual: true,
@@ -1461,11 +1461,11 @@ const CHARS = {
   gantetsu: { name: '僧兵 岩鉄', short: '岩鉄', style: 'kongo', title: '山門を守る、鉄壁の荒法師',
     look: { kim: '#e8e4dc', kimD: '#b8b2a6', kimL: '#ffffff', hak: '#3a3a44', hakD: '#24242c', hakL: '#54545e', obi: '#8a6a2a', under: '#2a2a2a',
       skin: '#d8a070', skinD: '#a8703e', hair: '#1a1418', hood: '#f0ece4', hoodD: '#c4beb2', foot: '#e8e4dc', sandal: '#3a2618',
-      blade: '#d8dce4', bladeD: '#7a8290', tip: '#ffffff', tsuba: '#5a5a5a', tsuka: '#2a1a10', saya: '#2a1a10', sayaM: '#8a8a8a',
+      blade: '#8a5c34', bladeD: '#56381c', tip: '#6a4626', tsuba: '#3a2614', tsuka: '#6e4828', saya: null,   // 樫の六尺棒（腰の鞘はない）
       hairStyle: 'katou', armor: '#4a4a54', armorL: '#7a7a86', tails: [{ at: 'pony', key: 'hood', keyD: 'hoodD', segs: 4, len: 3, w: 3 }] },
     alt: { hood: '#3a2a4a', hoodD: '#24182e', kim: '#6a5a7a', kimD: '#463a52', kimL: '#8a7a9a', armor: '#6a5030', armorL: '#9a7a48' } },
   // 浪人 旅鴉：黒い浪人笠の流れ者
-  kuro: { name: '浪人 旅鴉', short: '旅鴉', style: 'jigen', title: '笠に顔を隠し、諸国を渡り歩く剛剣の浪人',
+  kuro: { name: '浪人 十蔵', short: '十蔵', style: 'jigen', title: '笠に顔を隠し、諸国を渡り歩く剛剣の浪人',
     look: { kim: '#1c1418', kimD: '#0a0608', kimL: '#4a2a34', hak: '#3a0a10', hakD: '#200408', hakL: '#5a1a22', obi: '#c8a040', under: '#d8d0bc',
       skin: '#e0aa78', skinD: '#a8724a', hair: '#120c0c', foot: '#d8d0bc', sandal: '#3a2618', blade: '#e8e4dc', bladeD: '#8a8478', tip: '#ffffff',
       tsuba: '#8a8a96', tsuka: '#3a1010', saya: '#c8a040', sayaM: '#ffe080', hairStyle: 'hat', hat: '#3a3236', hatD: '#1a1618' },
@@ -1479,7 +1479,7 @@ const CHARS = {
       tsuba: '#1e8a86', tsuka: '#0c4a4e', saya: null, hairStyle: 'metal' },
     alt: { kim: '#d8b868', kimD: '#6a5424', kimL: '#fff4c8', hak: '#c8a450', hakD: '#5a4418', hakL: '#ffeab0', skin: '#dcc078', skinD: '#6a5424', hair: '#dcc078', foot: '#a88a40' } },
 };
-const CHAR_ORDER = ['aoi', 'kotaro', 'gonzo', 'hayate', 'gantetsu', 'shizuma', 'tomoe', 'kimen', 'ittosai', 'kuro'];   // 左端は誠之介、あとは一人用の登場順（右端だけ旅鴉）
+const CHAR_ORDER = ['aoi', 'kotaro', 'gonzo', 'hayate', 'gantetsu', 'shizuma', 'tomoe', 'kimen', 'ittosai', 'kuro'];   // 左端は誠一、あとは一人用の登場順（右端だけ十蔵）
 const isCol = v => typeof v === 'string' && v[0] === '#';
 function whitePal(p) { const w = {}; for (const k in p) w[k] = isCol(p[k]) ? '#ffffff' : p[k]; return w; }
 function blackPal(p) { const w = {}; for (const k in p) w[k] = isCol(p[k]) ? '#06040a' : p[k]; return w; }
@@ -2535,7 +2535,7 @@ const STAGE_DEFS = [
     },
     front(g, st) { for (const l of st.needles) drawLeaf(g, l); },
   },
-  // 鬼面の舞台：丑三つ時の古い塚。五輪塔と卒塔婆が並び、青白い鬼火が漂う
+  // 左近の舞台：丑三つ時の古い塚。五輪塔と卒塔婆が並び、青白い鬼火が漂う
   { id: 'onibi', name: '鬼火の塚', sub: '丑三つ', wind: -0.1, amb: 'soft', tint: 'rgba(110,70,160,0.14)', reflect: 0, music: [66, 46, 112],
     dust: ['#3a2a3a', '#4a3a4a', '#2a2030'],
     build(P) {
@@ -3099,7 +3099,7 @@ const TITLE_MENU = [
   { id: 'versus', label: '二人で競う　同じ画面で', desc: '一台のキーボード、またはゲームパッド二つで、隣の相手と立ち合う。' },
   { id: 'host', label: 'フレンド対戦　部屋を作る', desc: '部屋コードが表示される。離れた相手に伝えて入ってもらおう。' },
   { id: 'join', label: 'フレンド対戦　部屋に入る', desc: '相手から聞いた部屋コードを入力して立ち合う。' },
-  { id: 'tutorial', label: '稽古　遊び方を学ぶ', desc: '基本の操作から、「突き」「見切り」「踏み込み」まで。' },
+  { id: 'tutorial', label: '稽古　遊び方を学ぶ', desc: '基本の操作を習得しよう。' },
 ];
 const titleMenu = () => TOUCH.on ? TITLE_MENU.filter(m => m.id !== 'versus') : TITLE_MENU;
 function drawLogo(cx, cy, s = 1) {
@@ -3537,7 +3537,7 @@ function startStory(me = 'aoi') {
 function syncLives() { const S0 = G.story; if (S0.shown > S0.lives) S0.lostAt = G.time; S0.shown = S0.lives; }
 function toMap() { G.mode = 'map'; G.mapT = 0; G.p = null; G.replay = null; Music.play('map'); clearFX(); }
 // 十戦目「無双ノ門」：コンティニューせずに来れば朝日、一度でもコンティニューしていれば夕暮れ（タイトルの中庭）
-//   朝日の門で誠之介を破った者だけが、真打のもとへ進める
+//   朝日の門で誠一を破った者だけが、真打のもとへ進める
 const ladderStage = (S0, L) => STAGE_DEFS[L.stage].id === 'court' && S0.continues ? TITLE_STAGE : L.stage;
 const stageLabel = (S0, L) => { const d = STAGE_DEFS[L.stage]; return ladderStage(S0, L) === TITLE_STAGE ? { name: d.name, sub: STAGE_DEFS[TITLE_STAGE].sub } : d; };
 function toCard() { const L = G.story.ladder[G.story.idx]; setStage(ladderStage(G.story, L)); G.p = null; G.mode = 'card'; G.cardT = 0; clearFX(); }
@@ -3811,7 +3811,7 @@ const OMEN = { SWITCH: 100, BEAM: 170, HIT: 230, GATHER: 300, REVEAL: 360, STAND
 function startOmen() {
   const S0 = G.story;
   S0.ladder.push(Object.assign({ mirror: false }, TRUE_BOSS)); S0.idx++; S0.retry = false;
-  // 誠之介を破ったら、すぐ道中記へ（「十」の先に新しい地が現れる）。着いた先の虚ノ間で真打が現れる
+  // 誠一を破ったら、すぐ道中記へ（「十」の先に新しい地が現れる）。着いた先の虚ノ間で真打が現れる
   G.omenT = OMEN.SWITCH; S0.fresh = true; G.mode = 'map'; G.mapT = 0; G.p = null; Music.stop(); clearFX();
   G.omen = { shards: [] };
   for (let i = 0; i < 46; i++) { const a = Math.random() * 6.283, r = 60 + Math.random() * 90; G.omen.shards.push({ sx: 210 + Math.cos(a) * r, sy: GY - 30 + Math.sin(a) * r * 0.6, tx: 210 + (Math.random() - 0.5) * 16, ty: GY - 4 - Math.random() * 52, d: Math.random() * 30, c: pick(['#ffffff', '#9af2e2', '#34bcb2']) }); }
